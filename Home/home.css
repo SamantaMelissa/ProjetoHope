@@ -1,0 +1,254 @@
+/* Root é uma varivael global dentro do css */
+:root{
+    --tipo-texto: 'Nunito Sans', sans-serif;
+    --cor-fundo: #B0E6CF;
+    --cor-texto: #000000;
+    --cor-titulo: #7000AE;
+    --borda-padrao: 0px 0px 20px 20px;
+    --cor-fundo-all: #F2F2F4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--tipo-texto);
+}
+
+/* Animação do Header */
+
+@keyframes wave {
+    0% {
+      background-position: 0 bottom, 0 bottom, 0 center;
+    }
+    100% {
+      background-position: -8000px bottom, -20000px bottom, -1659px center;
+    }
+  }
+/* Finalização da Animação do Header */
+
+/* Configuração do header */
+.header_home{
+    transform-origin: bottom;
+    background-image: url(https://i.imgur.com/fX1LSeC.png), url(https://i.imgur.com/Agh1uGq.png);
+    background-size: 800px,800px,1800px;
+    background-position: calc(50% - 200px) bottom, center;
+    background-repeat: repeat-x;
+    -webkit-animation: wave 30s infinite alternate;
+    -moz-animation:    wave 30s infinite alternate;
+    -o-animation:      wave 30s linear infinite alternate;
+    animation: wave 30s linear infinite alternate;
+    background-color: var(--cor-fundo);
+    color: var(--cor-titulo);
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+
+    height: 100px;
+}
+
+#img_logo{
+    width: 70px;
+}
+
+#nav_header{
+    width: 20%;
+}
+
+#nav_header a{
+    text-decoration: none;
+    /* o margin será da seguinte forma:
+    margin: top, right, bottom, left; */
+    margin: 0 20px 0 20px;
+    
+}
+
+/* Finalizção da configuração do Header */
+
+
+/* Configuração do Body */
+
+
+body{
+    background-color: var(--cor-fundo-all);
+    color: var(--cor-titulo);
+}
+
+/* Primeira section */
+
+.sectionHome01{
+    display: flex;
+    padding: 5%;
+    text-align: center;
+}
+
+.sectionHome01 img{
+    width: 40%;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.sectionHome01 div {
+    padding: 25px;
+}
+
+.titulo{
+    margin-bottom: 10px;
+}
+
+.botao{
+    color: #F2F2F4;
+    background-color: #610992;
+    border: none;
+    padding: 15px 20px 15px 20px;
+    border-radius:10px;
+    margin: 10px;
+}
+
+/* Segunda section */
+
+.sectionHome02{
+    background-color: var(--cor-fundo);
+    height: 70vh;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider .img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+    border-radius: 10px;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+/* Navegação entre slides */
+
+.slider .img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ .img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+
+/* Terceira section */
+
+
+.sectionHome03{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.sectionHome03 h1{
+    margin-bottom: 50px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.card{
+    background-color: var(--cor-fundo);
+    color: var(--cor-fundo-all);
+
+    width: 25%;
+    padding: 1%;
+
+    text-align: center;
+    border-radius: 15px 0px 15px 0px;
+
+}
+
+.card h3{
+    color: var(--cor-titulo);
+}
+
+.card0{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card0 img{
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+}
+
+
+
+
+
+
+
+
+/* Finalização da configuração do body */
+
+/* Config do footer */
+
+footer{
+    background-color: var(--cor-fundo);
+    color: var(--cor-fundo-all);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.socialMedia img{
+    width: 25px;
+    margin: 20px;
+}
